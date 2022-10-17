@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .calculator {
+        height: 100px;
+        margin-top: 50px;
+      }
+      .selected {
+        background-color: rgb(235, 235, 235);
+      }
+      .catImg {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="questionnaire" onclick="select(this)">
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        placeholder="Как тебя зовут?"
+      />
+      <button onclick="showMessage()">Сохранить</button>
+      <button id="clear" onclick="clearMessage()">Очистить</button>
+      <div id="text"></div>
+    </div>
+
+    <div class="calculator" onclick="select(this)">
+      <input
+        type="text"
+        name="firstNumber"
+        id="firstNumber"
+        placeholder="Введите число"
+      />
+      <input
+        type="text"
+        name="secondNumber"
+        id="secondNumber"
+        placeholder="Введите число"
+      />
+      <button onclick="calcSum()">+</button>
+      <button onclick="calcSubtraction()">-</button>
+      <button onclick="calcMultiplication()">*</button>
+      <button onclick="calcDivision()">/</button>
+      <div></div>
+      <input type="text" name="result" id="result" placeholder="Результат" />
+    </div>
+
+    <div class="gallery" onclick="select(this)">
+      <button onclick="changeMeBack()">Назад</button>
+      <img
+        class="catImg"
+        id="catImg"
+        src="https://images.unsplash.com/photo-1561552352-efbba9d6fc56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        alt="cat"
+      />
+      <button onclick="changeMeForward()">Вперёд</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
